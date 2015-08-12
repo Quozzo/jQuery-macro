@@ -12,6 +12,8 @@
 
 jQuery.macro = (function(){
     
+    var records = {};
+    
     function Macro(name) {
         
         if ( !(this instanceof Macro) ) {
@@ -19,7 +21,7 @@ jQuery.macro = (function(){
         }
     
         var recorded = this.recorded = [],
-            self = this;
+            records[name] = this;
         
         this.add = function(name, args) {
             recorded.push({
@@ -28,11 +30,11 @@ jQuery.macro = (function(){
             });
         };
         
-        jQuery.fn[name] = function() {
+        jQuery.fn.macro = function(name) {
             
             var m, i = 0, prev = this, cur = this;
             
-            while (m = recorded[i++]) {
+            while (m = records[name].recorded[i++]) {
                 cur = this[m.name].apply(prev, m.args);
                 // Returned collection must be instanceof jQuery
                 // since it will be the context for the next call
@@ -49,9 +51,7 @@ jQuery.macro = (function(){
     }
     
     function register(name, fn) {
-        
-        fn = fn || proto[name];
-        
+
         proto[name] = function() {
             this.add(name, arguments);
             return this;
@@ -73,6 +73,7 @@ jQuery.macro = (function(){
         register(i);
         
     }
+    register("macro");
     
     return Macro;
     
