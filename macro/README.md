@@ -10,7 +10,7 @@ More info: http://james.padolsey.com/javascript/macros-in-jquery/
     jQuery.macro('foo').css('color','red').addClass('foo');
     
     // Use the macro:
-    jQuery('.someElements').foo(); // Sets color to red and adds the class, "foo"
+    jQuery('.someElements').macro('foo'); // Sets color to red and adds the class, "foo"
 
 ---
 
@@ -26,7 +26,7 @@ Calling `jQuery.macro` will give you a macro object, which you can think of as a
     
     myMacro.addClass('whoa');
     
-    jQuery('div').myMacro(); // Does the same as before PLUS adds a class of whoa!
+    jQuery('div').macro('myMacro'); // Does the same as before PLUS adds a class of whoa!
 
 ---
 
