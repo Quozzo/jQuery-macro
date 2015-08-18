@@ -22,7 +22,7 @@ Calling `jQuery.macro` will give you a macro object, which you can think of as a
     
     myMacro.css('color','red');
     
-    jQuery('div').myMacro(); // Applies a color of red to all DIVS
+    jQuery('div').macro('myMacro'); // Applies a color of red to all DIVS
     
     myMacro.addClass('whoa');
     
