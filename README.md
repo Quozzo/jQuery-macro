@@ -1,12 +1,6 @@
-jquery.fn
+jquery.macro
 ===
 
-*A collection of jQuery plugins*
-
-**Note**: This is an old repo. These plugins are not being actively developed, and they're
-mostly small and simple enough for anyone familiar with JS/jQuery/DOM to understand.
-If something's broken, I recommend looking into the code. It's nice to know how stuff
-works anyway... 
 
 ###Containing:
 
