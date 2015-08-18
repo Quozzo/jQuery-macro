@@ -20,8 +20,8 @@ jQuery.macro = (function(){
             return new Macro(name);
         }
     
-        var recorded = this.recorded = [],
-            records[name] = this;
+        var recorded = this.recorded = [];
+        records[name] = this;
         
         this.add = function(name, args) {
             recorded.push({
