@@ -10,19 +10,12 @@ works anyway...
 
 ###Containing:
 
- * [Pulse][2]
- * [Macro][3]
- * [Cross domain Ajax][4]
- * [sortElements][5]
- * [Proximity event][6]
+ * [Macro][1]
  
  
 ###Licenses
 
 As of 2013 these plugins are released to the public domain under [UNLICENSE](http://unlicense.org/UNLICENSE).
  
-[2]: http://github.com/padolsey/jQuery-Plugins/tree/master/pulse/
-[3]: http://github.com/padolsey/jQuery-Plugins/tree/master/macro/
-[4]: http://github.com/padolsey/jQuery-Plugins/tree/master/cross-domain-ajax/
-[5]: http://github.com/padolsey/jQuery-Plugins/tree/master/sortElements/
-[6]: http://github.com/padolsey/jQuery-Plugins/tree/master/proximity-event/
+[1]: http://github.com/padolsey/jQuery-Plugins/tree/master/macro/
+
